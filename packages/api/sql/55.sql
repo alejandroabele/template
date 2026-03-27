@@ -1,0 +1,23 @@
+ALTER TABLE presupuesto_materiales
+ADD COLUMN created_at TIMESTAMP NULL,
+ADD COLUMN created_by INT NULL,
+ADD COLUMN updated_at TIMESTAMP NULL,
+ADD COLUMN updated_by INT NULL,
+ADD COLUMN deleted_at TIMESTAMP NULL,
+ADD COLUMN deleted_by INT NULL;
+
+ALTER TABLE presupuesto_manodeobra
+ADD COLUMN created_at TIMESTAMP NULL,
+ADD COLUMN created_by INT NULL,
+ADD COLUMN updated_at TIMESTAMP NULL,
+ADD COLUMN updated_by INT NULL,
+ADD COLUMN deleted_at TIMESTAMP NULL,
+ADD COLUMN deleted_by INT NULL;
+
+ALTER TABLE presupuesto_suministros
+ADD COLUMN created_at TIMESTAMP NULL,
+ADD COLUMN created_by INT NULL,
+ADD COLUMN updated_at TIMESTAMP NULL,
+ADD COLUMN updated_by INT NULL,
+ADD COLUMN deleted_at TIMESTAMP NULL,
+ADD COLUMN deleted_by INT NULL;

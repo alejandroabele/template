@@ -1,0 +1,2 @@
+ALTER TABLE banco
+ADD COLUMN incluir_en_total TINYINT(1) NOT NULL DEFAULT 1;

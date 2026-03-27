@@ -1,0 +1,18 @@
+export const ALQUILER_ESTADO = ['ARRENDADO', 'EN_NEGOCIACION'] as const
+export const ALQUILER_TIPO = ['FLOTA', 'TRAILERS', 'CARTELES', 'EQUIPAMIENTO', 'UBICACION'] as const
+export const ALQUILER_FORMATO = [
+    'HABITACIONAL',
+    'OFICINA',
+    'COMEDOR',
+    'MONOCOLUMNA',
+    'CONVENCIONAL',
+    'MURAL',
+    'TERRAZA',
+    'TERRAZA DOBLE FAZ',
+    'MONOCOLUMNA DOBLE FAZ',
+    'RETICULADO',
+    'PAÑOL',
+    'RODANTE',
+    'SANITARIO',
+    'PLANTA LIBRE'
+] as const

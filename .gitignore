@@ -1,0 +1,16 @@
+node_modules
+.env
+.env.local
+.env.production
+.env.test
+!.env.example
+!.env.development.example
+certbot/conf/*
+nginx.conf
+
+# Public assets - ignorar logos y assets personalizados
+packages/front/public/logo.png
+packages/front/public/logo_*.png
+packages/front/public/web-app-manifest-*.png
+packages/front/src/app/favicon.ico
+openspec
