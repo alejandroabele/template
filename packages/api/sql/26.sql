@@ -1,1 +1,0 @@
-ALTER TABLE presupuesto ADD COLUMN ignorar_stock BOOLEAN NOT NULL DEFAULT FALSE;

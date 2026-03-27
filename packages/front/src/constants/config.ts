@@ -20,6 +20,11 @@ export const CONFIGURACIONES = {
   NOTIFICACIONES_EMAIL_ACTIVO: 'notificaciones_email_activo',
   NOTIFICACIONES_EMAIL_TEST: 'notificaciones_email_test',
 
+  // Módulo: Ejemplo
+  EJEMPLO_LIMITE_REGISTROS: 'EJEMPLO_LIMITE_REGISTROS',
+  EJEMPLO_ESTADO_DEFAULT: 'EJEMPLO_ESTADO_DEFAULT',
+  EJEMPLO_PERMITIR_SIN_IMAGEN: 'EJEMPLO_PERMITIR_SIN_IMAGEN',
+
   // Agregar aquí nuevas configuraciones siguiendo el patrón:
   // NOMBRE_DESCRIPTIVO: 'clave_en_base_de_datos',
 } as const;

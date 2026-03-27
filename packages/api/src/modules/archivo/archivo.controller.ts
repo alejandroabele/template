@@ -23,16 +23,7 @@ export class ArchivoController {
   create(
     @Body() createArchivoDto: CreateArchivoDto,
     @UploadedFile() file: File) {
-    const respose = {
-      originalName: file.originalname,
-      filename: file.filename,
-      encoding: file.encoding,
-      destination: file.destination,
-      path: file.path,
-    }
-
-    this.archivoService.create(createArchivoDto, file);
-    return respose
+    return this.archivoService.create(createArchivoDto, file);
   }
 
   @RequirePermissions(PERMISOS.ARCHIVOS_VER)

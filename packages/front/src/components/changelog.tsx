@@ -1,86 +1,39 @@
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-import { Calendar } from "lucide-react"
-import { CHANGELOG_DATA } from "@/constants/changelog"
-type ChangeType = "new" | "improved" | "fixed"
+'use client';
 
-interface Change {
-    type: ChangeType
-    text: string
-}
+import { CHANGELOG_DATA, ChangelogEntryType } from '@/constants/changelog';
 
-interface ChangelogEntryProps {
-    entry: {
-        date: string
-        title: string
-        changes: Change[]
-    }
-}
+const typeLabel: Record<ChangelogEntryType, string> = {
+    new: 'Nuevo',
+    improved: 'Mejorado',
+    fixed: 'Corregido',
+};
 
-function ChangelogEntry({ entry }: ChangelogEntryProps) {
-    const getBadgeVariant = (type: ChangeType) => {
-        switch (type) {
-            case "new":
-                return "default"
-            case "improved":
-                return "warning"
-            case "fixed":
-                return "success"
-            default:
-                return "default"
-        }
-    }
-
-    const getBadgeLabel = (type: ChangeType) => {
-        switch (type) {
-            case "new":
-                return "Nuevo"
-            case "improved":
-                return "Mejorado"
-            case "fixed":
-                return "Corregido"
-            default:
-                return type
-        }// Datos de ejemplo para el changelog organizado por fechas
-
-    }
-
-    return (
-        <Card>
-            <CardHeader>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                    <Calendar className="h-4 w-4" />
-                    {entry.date}
-                </div>
-                <CardTitle className="text-xl">{entry.title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-                <ul className="space-y-4">
-                    {entry.changes.map((change, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                            <Badge variant={getBadgeVariant(change.type)} className="mt-0.5">
-                                {getBadgeLabel(change.type)}
-                            </Badge>
-                            <span>{change.text}</span>
-                        </li>
-                    ))}
-                </ul>
-            </CardContent>
-            <Separator />
-        </Card>
-    )
-}
-
-
-
+const typeColor: Record<ChangelogEntryType, string> = {
+    new: 'text-green-600',
+    improved: 'text-blue-600',
+    fixed: 'text-orange-600',
+};
 
 export function Changelog() {
     return (
-        <div className="space-y-8">
-            {CHANGELOG_DATA.map((entry, index) => (
-                <ChangelogEntry key={index} entry={entry} />
+        <div className="space-y-10">
+            {CHANGELOG_DATA.map((entry, idx) => (
+                <div key={idx} className="border-l-2 border-primary pl-6">
+                    <div className="flex items-center gap-3 mb-3">
+                        <span className="text-sm text-muted-foreground">{entry.date}</span>
+                    </div>
+                    <ul className="space-y-1 text-sm list-none">
+                        {entry.changes.map((change, i) => (
+                            <li key={i} className="flex gap-2">
+                                <span className={`font-medium ${typeColor[change.type]}`}>
+                                    [{typeLabel[change.type]}]
+                                </span>
+                                <span className="text-muted-foreground">{change.text}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             ))}
         </div>
-    )
+    );
 }

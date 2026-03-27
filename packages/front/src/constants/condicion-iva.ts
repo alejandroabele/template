@@ -1,5 +1,0 @@
-export const CONDICION_IVA = {
-    "30": "RESPONSABLE INSCRIPTO",
-    "32": "SUJETO EXENTO",
-    "20": "MONOTRIBUTO"
-}

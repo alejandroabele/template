@@ -1,27 +1,14 @@
 "use client";
-import DashboardAdmin from "@/components/dashboards/admin";
-import DashboardProduccion from "@/components/dashboards/produccion";
-import { hasPermission } from "@/hooks/use-access";
-import { PERMISOS } from "@/constants/permisos";
+
+import { PageTitle } from "@/components/ui/page-title";
 
 export default function HomePage() {
-  // Verificar acceso a la página principal
-
-  // Verificar qué componentes puede ver el usuario actual
-  const canViewProduccion = hasPermission(
-    PERMISOS.PRESUPUESTOS_PRODUCCION_DASHBOARD
-  );
-  const canViewServicio = hasPermission(
-    PERMISOS.PRESUPUESTOS_SERVICIOS_DASHBOARD
-  );
-  const canViewOthers = hasPermission(PERMISOS.ALQUILERES_DASHBOARD);
-
   return (
-    <>
-      {canViewProduccion && <DashboardProduccion showServicio={false} />}
-      {canViewServicio && <DashboardProduccion showProduccion={false} />}
-
-      {canViewOthers && <DashboardAdmin />}
-    </>
+    <div className="space-y-6">
+      <PageTitle title="Inicio" />
+      <p className="text-muted-foreground">
+        Bienvenido al sistema. Seleccioná una opción del menú para comenzar.
+      </p>
+    </div>
   );
 }

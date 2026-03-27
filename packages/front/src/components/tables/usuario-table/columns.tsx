@@ -16,7 +16,6 @@ import {
 } from "@tanstack/react-table"
 import { MoreHorizontal } from 'lucide-react'
 import Link from "next/link"
-import { SelectFilter } from "@/components/select-filter"
 import { DeleteDialog } from "@/components/ui/delete-dialog"
 const baseUrl = 'usuarios'
 const DataTableRowActions = ({ data }: { data: Usuario }) => {
@@ -93,9 +92,6 @@ export const columns: ColumnDef<Usuario>[] = [
     accessorKey: "permiso",
     header: "Permiso",
     cell: ({ row }) => <div> {row.getValue("permiso")} </div>,
-    meta: {
-      customFilter: (table: TableType<Usuario>) => <SelectFilter table={table} columnId="permiso" />,
-    },
   },
   {
     accessorKey: "telefono",

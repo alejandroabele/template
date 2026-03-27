@@ -22,7 +22,7 @@ import { Menu } from "@/types";
 export function NavMain({ items }: { items?: Menu }) {
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>CRM</SidebarGroupLabel>
+      <SidebarGroupLabel>Sistema</SidebarGroupLabel>
       <SidebarMenu>
         {items?.map((item, i) => (
           <SidebarMenuItem key={i}>
