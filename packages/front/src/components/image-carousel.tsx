@@ -55,7 +55,6 @@ const ImageCarouselItem = ({ archivo }: ImageCarouselItemProps) => {
 
   return (
     <a href={objectUrl} target="_blank" rel="noopener noreferrer" className="block">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={objectUrl}
         alt={archivo.nombreArchivoOriginal || "Imagen"}

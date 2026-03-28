@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any, no-prototype-builtins */
+/* eslint-disable no-prototype-builtins */
 
 import { ILike, In, Between, SelectQueryBuilder } from 'typeorm';
 

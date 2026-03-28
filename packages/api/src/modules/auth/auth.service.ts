@@ -81,7 +81,6 @@ export class AuthService {
       nombre: usuario.nombre,
       role: usuario.roleId
     };
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return this.jwtService.sign(payload, { expiresIn: expiresIn as any, secret });
   }
 

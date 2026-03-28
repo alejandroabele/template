@@ -10,7 +10,7 @@ import { Reflector } from '@nestjs/core';
 import { Observable } from 'rxjs';
 
 import { MESSAGE_UNAUTHORIZED } from '@/constants/sistema';
-import configAuth from 'src/config/auth.config';
+import configAuth from '@/config/auth.config';
 import { IS_PUBLIC_KEY } from '../../decorators/public/public.decorator';
 
 @Injectable()

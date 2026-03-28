@@ -221,7 +221,6 @@ export function GenericCalendar<T>({
       }
     }
     // Solo ejecutar en el montaje inicial
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
     if (view === "month" && onMonthChange) {

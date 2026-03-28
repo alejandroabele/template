@@ -17,7 +17,6 @@ function MultiSelectFilter<T>({ table, columnId }: MultiSelectFilterProps<T>) {
 
   React.useEffect(() => {
     setSelected(defaultValue);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [JSON.stringify(defaultValue)]);
 
   const handleChange = (value: string[]) => {
