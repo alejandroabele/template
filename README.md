@@ -187,9 +187,8 @@ También comenta el certbot en `docker-compose.yml`:
 
 ```yaml
 # Comentar estas líneas temporalmente
-#certbot:
-#  image: certbot/certbot:latest
-#  ...
+#    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+#    restart: always
 ```
 
 #### 4. Levantar el stack

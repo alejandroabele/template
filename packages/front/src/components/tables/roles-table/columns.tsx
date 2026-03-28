@@ -32,9 +32,6 @@ const DataTableRowActions = ({ data }: { data: Role }) => {
         <Link className="" href={`${baseUrl}/${data.id}`}>
           <DropdownMenuItem onClick={() => {}}>Editar</DropdownMenuItem>
         </Link>
-        <Link className="" href={`/roles/${data.id}/proceso-generales`}>
-          <DropdownMenuItem onClick={() => {}}>Gestionar Procesos Generales</DropdownMenuItem>
-        </Link>
         <Link className="" href={`/roles/${data.id}/estados-compras`}>
           <DropdownMenuItem onClick={() => {}}>Gestionar Estados de Compras</DropdownMenuItem>
         </Link>
